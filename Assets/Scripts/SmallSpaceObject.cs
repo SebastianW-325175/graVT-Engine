@@ -12,14 +12,14 @@ public class TinyObject : MonoBehaviour
     private float momentOfInertia;
 
     [Tooltip("The collider of the object. This will be used to calculate it's moment of inertia")] [SerializeField]
-    private Collider2D collider = null;
+    private Collider2D collider;
     
     private Vector2 _linearVelocity;
     private float _angularVelocity;
 
     private void FixedUpdate()
     {
-        gameObject.transform.Translate(_linearVelocity * Time.fixedDeltaTime);
+        gameObject.transform.Translate(_linearVelocity * Time.fixedDeltaTime, Space.World);
         gameObject.transform.Rotate(0, 0, (_angularVelocity * Time.fixedDeltaTime * RadiansToDegrees));
     }
 
@@ -35,7 +35,7 @@ public class TinyObject : MonoBehaviour
 
     private void Update()
     {
-        ApplyTorque(1.0f);
+        
     }
 
     private void Start()

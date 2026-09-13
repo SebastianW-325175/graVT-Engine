@@ -16,11 +16,14 @@ public static class MomentOfInteriaSolver
 
     private static float Solve(CircleCollider2D circleCollider2D, float mass)
     {
-        return (float)(0.5 * mass * Math.Pow(circleCollider2D.radius, 2));
+        float scale = circleCollider2D.transform.lossyScale.x;
+        return (float)(0.5 * mass * Math.Pow(circleCollider2D.radius * scale, 2));
     }
 
     private static float Solve(BoxCollider2D boxCollider2D, float mass)
     {
-        return (float)(mass * (Math.Pow(boxCollider2D.size.y, 2) + Math.Pow(boxCollider2D.size.x, 2)) / 12.0);
+        float xScale = boxCollider2D.transform.lossyScale.x;
+        float yScale = boxCollider2D.transform.lossyScale.y;
+        return (float)(mass * (Math.Pow(boxCollider2D.size.y * yScale, 2) + Math.Pow(boxCollider2D.size.x * xScale, 2)) / 12.0);
     }
 }
