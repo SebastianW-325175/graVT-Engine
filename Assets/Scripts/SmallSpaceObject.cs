@@ -28,14 +28,15 @@ public class TinyObject : MonoBehaviour
         _linearVelocity += (force * Time.fixedDeltaTime) / mass;
     }
 
+    public void ApplyForce(Vector2 force, Vector2 offset)
+    {
+        ApplyForce(force);
+        ApplyTorque(offset.magnitude * force.magnitude * Mathf.Sin( Vector2.SignedAngle(offset, force) * Mathf.Deg2Rad ));
+    }
+
     public void ApplyTorque(float torque)
     {
         _angularVelocity += (torque / momentOfInertia) * Time.fixedDeltaTime;
-    }
-
-    private void Update()
-    {
-        
     }
 
     private void Start()
