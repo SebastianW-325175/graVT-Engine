@@ -1,0 +1,6 @@
+[submodule "graVT-Engine.wiki"]
+	path = graVT-Engine.wiki
+	url = https://github.com/SebastianW-325175/graVT-Engine.wiki.git
+[submodule "Docs"]
+	path = Docs
+	url = https://github.com/SebastianW-325175/graVT-Engine.wiki.git
