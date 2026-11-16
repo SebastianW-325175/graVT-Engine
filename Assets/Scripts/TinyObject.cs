@@ -2,7 +2,7 @@ using System;
 using DefaultNamespace;
 using UnityEngine;
 
-public class TinyObject : MonoBehaviour
+public class TinyObject : MonoBehaviour, IBoundingBox
 {
     /// <summary>
     /// Reference to the World2D in which the TinyObject is being simulated. Meant to be automatically injected by the World2D.
@@ -49,6 +49,12 @@ public class TinyObject : MonoBehaviour
     public void ApplyTorque(float torque)
     {
         _angularVelocity += (torque / momentOfInertia) * Time.fixedDeltaTime;
+    }
+
+    public Bounds2D GetBounds()
+    {
+        Bounds bounds3D = collider.bounds;
+        return new Bounds2D(bounds3D.center, bounds3D.size);
     }
 
     private void OnEnable()
