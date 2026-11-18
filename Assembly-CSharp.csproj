@@ -51,14 +51,14 @@
     <Analyzer Include="/home/sebastian/Unity/Hub/Editor/6000.6.0f1/Editor/Data/BCLExtensions/TargetingPacks/netstandard2.1/analyzers/dotnet/roslyn4.0/cs/System.Text.Json.SourceGeneration.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/IBoundingBox.cs" />
     <Compile Include="Assets/Scripts/TinyObject.cs" />
     <Compile Include="Assets/Scripts/QuadTree.cs" />
     <Compile Include="Assets/Scripts/Test Spaceship.cs" />
     <Compile Include="Assets/Scripts/MomentOfInteriaSolver.cs" />
+    <Compile Include="Assets/Scripts/Bounds2D.cs" />
     <Compile Include="Assets/Scripts/Utils.cs" />
     <Compile Include="Assets/Scripts/World2D.cs" />
-    <Compile Include="Assets\Scripts\Bounds2D.cs" />
-    <Compile Include="Assets\Scripts\IBoundingBox.cs" />
     <Reference Include="UnityEngine">
       <HintPath>/home/sebastian/Unity/Hub/Editor/6000.6.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
