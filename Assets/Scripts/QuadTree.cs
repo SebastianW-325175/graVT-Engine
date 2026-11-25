@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 
-namespace DefaultNamespace
+namespace GraVTEngine
 {
     //TODO: Edge cases to handle:
     // 1. A body occupies multiple quadrants

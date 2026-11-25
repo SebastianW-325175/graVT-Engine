@@ -1,4 +1,4 @@
-namespace DefaultNamespace
+namespace GraVTEngine
 {
     public interface IBoundingBox
     {

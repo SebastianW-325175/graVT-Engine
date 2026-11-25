@@ -1,5 +1,5 @@
 using System;
-using DefaultNamespace;
+using GraVTEngine;
 using UnityEngine;
 
 public class TinyObject : MonoBehaviour, IBoundingBox

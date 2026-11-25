@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace DefaultNamespace
+namespace GraVTEngine
 {
     public class World2D : MonoBehaviour
     {
